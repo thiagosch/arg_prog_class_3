@@ -5,88 +5,108 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
     <style>
       button {
         border: 0px;
         padding: 0.5rem;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 0 15px;
         margin-top: 0.8rem;
+        border-radius: 3px;
       }
-      p {
+      .class_container {
         text-align: left;
         background-color: #d7d7d7;
         padding: 1rem;
+        margin-top: 2rem;
+        border-radius: 5px;
+      }
+      code {
+        border-radius: 5px;
+      }
+      .class_container{
+        font-size: 13px;
       }
     </style>
   </head>
   <body>
     <div>
-      <p>
+      <div class="class_container">
         Generar una función que le ingrese por parámetro algún dato ya sea ingresado por el usuario o declarado
         anteriormente en su código y mostrar por consola el tipo de dato que es. <br />
         <button onclick="ejercicio_1()">Ejercicio nº 1</button>
-      </p>
+        <pre><code id="ejercicio_1"></code></pre>
+      </div>
 
-      <p>
+      <div class="class_container">
         Dado dos números ingresados por el usuario, se pide realizar una función que devuelve la resta de ambos números.
         Mostrar el resultado por la consola. <br />
         <button onclick="ejercicio_2()">Ejercicio nº 2</button>
-      </p>
+        <pre><code id="ejercicio_2"></code></pre>
+      </div>
 
-      <p>
+      <div class="class_container">
         Generar una función que le ingresen por parámetro dos valores distintos en dos variables a y b, luego el valor
         ingresado en a pasarlo a b y el valor Ingresado en b, Pasarlo a a y mostrarlos. <br />
         <button onclick="ejercicio_3_a()">Ejercicio nº 3</button>
-      </p>
+        <pre><code id="ejercicio_3"></code></pre>
+      </div>
 
-      <p>
+      <div class="class_container">
         Generar una función que le ingrese por parámetro el valor del lado de un cuadrado calcular su perímetro, su
         superficie, e informar los mismos en consola
         <br />
         <button onclick="ejercicio_4()">Ejercicio nº 4</button>
-      </p>
+        <pre><code id="ejercicio_4"></code></pre>
+      </div>
 
-      <p>
+      <div class="class_container">
         Generar una función que dada una temperatura en grados fahrenheit los convierta a grados celsius.<br />
         <button onclick="ejercicio_5()">Ejercicio nº 5</button>
-      </p>
+        <pre><code id="ejercicio_5"></code></pre>
+      </div>
 
-      <p>
+      <div class="class_container">
         Realizar una función que calcule el factorial de un número ingresado por el usuario (el número no puede ser
         mayor de 10, realizar la validación). Mostrar el resultado por la consola.
         <br />
         <button onclick="ejercicio_6()">Ejercicio nº 6</button>
-      </p>
+        <pre><code id="ejercicio_6"></code></pre>
+      </div>
 
-      <p>
+      <div class="class_container">
         Dado una cadena de caracteres ingresada por el usuario, se pide realizar un script que indique si ese texto es
         un palíndromo. Ejemplo de palíndromo: “Somos o no somos”.
         <br />
         <button onclick="ejercicio_7()">Ejercicio nº 7</button>
-      </p>
+        <pre><code id="ejercicio_7"></code></pre>
+      </div>
 
-      <p>
+      <div class="class_container">
         Dado una cadena de caracteres ingresada por el usuario, se pide realizar un script que lo muestre en mayúsculas
         y luego en minúsculas. Investigue el manejo de string en Javascript.
         <br />
         <button onclick="ejercicio_8()">Ejercicio nº 8</button>
-      </p>
+        <pre><code id="ejercicio_8"></code></pre>
+      </div>
 
-      <p>
+      <div class="class_container">
         Se pide que un usuario ingrese una nota numérica de un alumno. Muestra la calificación resultante según la nota
         ingresada: <br />0-3: Muy deficiente <br />3-5: Insuficiente <br />5-6: Suficiente <br />6-7: Bien <br />7-9:
         Notable <br />9-10: Sobresaliente
         <br />
         <button onclick="ejercicio_9()">Ejercicio nº 9</button>
-      </p>
-      <p>
+        <pre><code id="ejercicio_9"></code></pre>
+      </div>
+      <div class="class_container">
         Se pide realizar un script en el que el usuario introduce el número del mes (1 al 12) y devuelve si ese mes
         tiene 30 o 31 días.
         <br />
         <button onclick="ejercicio_10()">Ejercicio nº 10</button>
-      </p>
+        <pre><code id="ejercicio_10"></code></pre>
+      </div>
 
-      <p>
+      <div class="class_container">
         Crear un script que genere una pirámide como el ejemplo con los números del 1 al número que ingrese el usuario
         (no puede ser mayor de 10, realizar la validación):<br />
         1<br />
@@ -97,24 +117,31 @@
         123456<br />
         <br/ >
         <button onclick="ejercicio_11()">Ejercicio nº 11</button>
-      </p>
+        <pre><code id="ejercicio_11"></code></pre>
+      </div>
 
-      <p>
+      <div class="class_container">
         Generar una función donde ingresen dos números, el primero corresponde a la cantidad de bultos en stock y el
         segundo a la cantidad de bultos que se pueden colocar en una caja. Calcule cuántas cajas completas se pueden
         llenar con los bultos disponibles y cuantos bultos sueltos quedarían. Mostrar ambos resultados en consola. <br/
         >
         <button onclick="ejercicio_12()">Ejercicio nº 12</button>
-      </p>
-      <p>
+        <pre><code id="ejercicio_12"></code></pre>
+      </div>
+      <div class="class_container">
         Se pide realizar un script para una tienda de coches: Si el coche a la venta es un Ford Fiesta (código
         "fiesta"), el descuento es de un 5%. Si el coche a la venta es un Ford Focus (código "focus"), el descuento es
         del 10%. El usuario introduce el artículo a través de su código y el script saca el descuento correspondiente
         por la consola. <br/ >
         <button onclick="ejercicio_13()">Ejercicio nº 13</button>
-      </p>
+        <pre><code id="ejercicio_13"></code></pre>
+      </div>
     </div>
-
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
     <script src="./main.js"></script>
   </body>
 </html>

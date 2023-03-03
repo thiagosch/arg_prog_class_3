@@ -144,8 +144,8 @@ function ejercicio_10() {
     numb += parseInt(number_of_days[index] * multiplyer);
     multiplyer /= 2;
   }
-  alert(month_name + " tiene " + numb + " dias");
   console.log(month_name, numb);
+  alert(month_name + " tiene " + numb + " dias");
 }
 
 function obtener_mes(number) {
@@ -171,3 +171,16 @@ function ejercicio_11() {}
 function ejercicio_12() {}
 
 function ejercicio_13() {}
+
+for (let i = 1; i <= 13; i++) {
+  let functionName = "ejercicio_" + i;
+
+  if (i == "3") {
+    functionName = "ejercicio_" + i + "_a";
+  }
+
+  document.getElementById("ejercicio_" + i).innerHTML = window[functionName].toString();
+
+  console.log(functionName);
+  functionName = window[functionName].toString();
+}
