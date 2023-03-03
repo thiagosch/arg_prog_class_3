@@ -131,6 +131,7 @@ function ejercicio_9() {
 }
 
 function ejercicio_10_a() {
+  //estas dos funciones las hice tipo 2am
   const month_number = prompt("Ingresa el numero del mes", "2");
   const month_name = ejercicio_10_b(month_number);
   if (month_number <= 0 || month_number >= 12) {
