@@ -7,9 +7,12 @@
     <title>Clase 3</title>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <link href="https://www.utn.edu.ar/images/logo_favicon.png" rel="shortcut icon" type="image/vnd.microsoft.icon" />
     <style>
       body {
         background-color: #fff3ff;
+        padding-bottom: 10rem;
+        margin: 0;
       }
       button {
         border: 0px;
@@ -29,133 +32,197 @@
         border-radius: 5px;
       }
       .class_container {
-        font-size: 13px;
+        font-weight: 800;
       }
 
       .hljs {
         background: #ffff !important;
         transition: 0.2s;
       }
-      #page_title {
-        padding-left: 5rem;
+      #header{
+        background: #a227cd;
+        color: rgb(221, 221, 221);
+        margin: 0;
       }
+      #page_title {
+        margin: 0;
+        display: inline-block;
+        padding: 1rem;
+        background:hsla(284, 62%, 85%, 0.193);
+        margin-left: 5rem;
+        margin-top: 1rem;
+        border-radius: 3px;
+        
+      }
+      .text_container {
+        max-width: 70%;
+        width: fit-content;
+        background: #fff3ff;
+        padding: 1rem;
+        border-radius: 5px;
+        color: #535353;
+      }
+      code {
+        max-width: fit-content;
+        background: white;
+        display: block;
+        padding: 1rem;
+      }
+      small{
+        color:rgb(108, 108, 108);
+      }
+      
     </style>
   </head>
   <body>
-    <div>
+    <div id="header">
       <div style="display: block">
         <h1 id="page_title">Clase 3 JavaScript</h1>
       </div>
-      <h5 style="text-align:right;padding-right:1rem;">Me emocione un poco con la tarea</h5>
+      <h5 style="text-align: right; padding-right: 1rem;padding-bottom: 1rem; margin:0">Me emocione un poco con la tarea</h5>
     </div>
     <div>
       <div class="class_container">
-        Generar una función que le ingrese por parámetro algún dato ya sea ingresado por el usuario o declarado
-        anteriormente en su código y mostrar por consola el tipo de dato que es. <br />
+        <div class="text_container">
+          Generar una función que le ingrese por parámetro algún dato ya sea ingresado por el usuario o declarado
+          anteriormente en su código.<br />
+          <small>mostrar por consola el tipo de dato que es. </small>
+        </div>
         <button onclick="ejercicio_1()">Ejercicio nº 1</button>
         <pre><code id="ejercicio_1"></code></pre>
       </div>
 
       <div class="class_container">
-        Dado dos números ingresados por el usuario, se pide realizar una función que devuelve la resta de ambos números.
-        Mostrar el resultado por la consola. <br />
+        <div class="text_container">
+          Dado dos números ingresados por el usuario, se pide realizar una función que devuelve la resta de ambos
+          números. <br />
+          <small>Mostrar el resultado por la consola.</small>
+        </div>
         <button onclick="ejercicio_2()">Ejercicio nº 2</button>
         <pre><code id="ejercicio_2"></code></pre>
       </div>
 
       <div class="class_container">
-        Generar una función que le ingresen por parámetro dos valores distintos en dos variables a y b, luego el valor
-        ingresado en a pasarlo a b y el valor Ingresado en b, Pasarlo a a y mostrarlos. <br />
+        <div class="text_container">
+          Generar una función que le ingresen por parámetro dos valores distintos en dos variables a y b, luego el valor
+          ingresado en a pasarlo a b y el valor Ingresado en b, Pasarlo a a y mostrarlos. <br />
+        </div>
         <button onclick="ejercicio_3_a()">Ejercicio nº 3</button>
-        <pre><code id="ejercicio_3"></code></pre>
+        <pre><code id="ejercicio_3_a"></code></pre>
+        <pre><code id="ejercicio_3_b"></code></pre>
       </div>
 
       <div class="class_container">
-        Generar una función que le ingrese por parámetro el valor del lado de un cuadrado calcular su perímetro, su
-        superficie, e informar los mismos en consola
-        <br />
+        <div class="text_container">
+          Generar una función que le ingrese por parámetro el valor del lado de un cuadrado calcular su perímetro, su
+          superficie. <br />
+          <small>mostrar area y perimetro en la consola</small>
+          <br />
+        </div>
         <button onclick="ejercicio_4()">Ejercicio nº 4</button>
         <pre><code id="ejercicio_4"></code></pre>
       </div>
 
       <div class="class_container">
-        Generar una función que dada una temperatura en grados fahrenheit los convierta a grados celsius.<br />
+        <div class="text_container">
+          Generar una función que dada una temperatura en grados fahrenheit los convierta a grados celsius.<br />
+        </div>
         <button onclick="ejercicio_5()">Ejercicio nº 5</button>
         <pre><code id="ejercicio_5"></code></pre>
       </div>
 
       <div class="class_container">
-        Realizar una función que calcule el factorial de un número ingresado por el usuario (el número no puede ser
-        mayor de 10, realizar la validación). Mostrar el resultado por la consola.
-        <br />
+        <div class="text_container">
+          Realizar una función que calcule el factorial de un número ingresado por el usuario (el número no puede ser
+          mayor de 10, realizar la validación).<br />
+          <small>Mostrar el resultado por la consola.</small>
+          <br />
+        </div>
         <button onclick="ejercicio_6()">Ejercicio nº 6</button>
         <pre><code id="ejercicio_6"></code></pre>
       </div>
 
       <div class="class_container">
-        Dado una cadena de caracteres ingresada por el usuario, se pide realizar un script que indique si ese texto es
-        un palíndromo. Ejemplo de palíndromo: “Somos o no somos”.
-        <br />
+        <div class="text_container">
+          Dado una cadena de caracteres ingresada por el usuario, se pide realizar un script que indique si ese texto es
+          un palíndromo.<br />
+          Ejemplo de palíndromo: “Somos o no somos”.
+          <br />
+        </div>
         <button onclick="ejercicio_7()">Ejercicio nº 7</button>
         <pre><code id="ejercicio_7"></code></pre>
       </div>
 
       <div class="class_container">
-        Dado una cadena de caracteres ingresada por el usuario, se pide realizar un script que lo muestre en mayúsculas
-        y luego en minúsculas. Investigue el manejo de string en Javascript.
-        <br />
+        <div class="text_container">
+          Dado una cadena de caracteres ingresada por el usuario, se pide realizar un script que lo muestre en
+          mayúsculas y luego en minúsculas. Investigue el manejo de string en Javascript.
+          <br />
+        </div>
         <button onclick="ejercicio_8()">Ejercicio nº 8</button>
         <pre><code id="ejercicio_8"></code></pre>
       </div>
 
       <div class="class_container">
-        Se pide que un usuario ingrese una nota numérica de un alumno. Muestra la calificación resultante según la nota
-        ingresada: <br />0-3: Muy deficiente <br />3-5: Insuficiente <br />5-6: Suficiente <br />6-7: Bien <br />7-9:
-        Notable <br />9-10: Sobresaliente
-        <br />
+        <div class="text_container">
+          Se pide que un usuario ingrese una nota numérica de un alumno.<br />
+          Muestra la calificación resultante según la nota ingresada: <br />0-3: Muy deficiente <br />3-5: Insuficiente
+          <br />5-6: Suficiente <br />6-7: Bien <br />7-9: Notable <br />9-10: Sobresaliente
+          <br />
+        </div>
         <button onclick="ejercicio_9()">Ejercicio nº 9</button>
         <pre><code id="ejercicio_9"></code></pre>
       </div>
       <div class="class_container">
-        Se pide realizar un script en el que el usuario introduce el número del mes (1 al 12) y devuelve si ese mes
-        tiene 30 o 31 días.
-        <br />
+        <div class="text_container">
+          Se pide realizar un script en el que el usuario introduce el número del mes (1 al 12) y devuelve si ese mes
+          tiene 30 o 31 días.
+          <br />
+        </div>
         <button onclick="ejercicio_10()">Ejercicio nº 10</button>
-        <pre><code id="ejercicio_10"></code></pre>
+        <pre><code id="ejercicio_10_a"></code></pre>
+        <pre><code id="ejercicio_10_b"></code></pre>
       </div>
 
       <div class="class_container">
-        Crear un script que genere una pirámide como el ejemplo con los números del 1 al número que ingrese el usuario
-        (no puede ser mayor de 10, realizar la validación):<br />
-        1<br />
-        12<br />
-        123<br />
-        1234<br />
-        12345<br />
-        123456<br />
-        <br/ >
+        <div class="text_container">
+          Crear un script que genere una pirámide como el ejemplo con los números del 1 al número que ingrese el usuario
+          <br />(no puede ser mayor de 10, realizar la validación):<br />
+          1<br />
+          12<br />
+          123<br />
+          1234<br />
+          12345<br />
+          123456<br />
+          <br/ >
+        </div>
         <button onclick="ejercicio_11()">Ejercicio nº 11</button>
         <pre><code id="ejercicio_11"></code></pre>
       </div>
 
       <div class="class_container">
-        Generar una función donde ingresen dos números, el primero corresponde a la cantidad de bultos en stock y el
-        segundo a la cantidad de bultos que se pueden colocar en una caja. Calcule cuántas cajas completas se pueden
-        llenar con los bultos disponibles y cuantos bultos sueltos quedarían. Mostrar ambos resultados en consola. <br/
-        >
+        <div class="text_container">
+          Generar una función donde ingresen dos números, el primero corresponde a la cantidad de bultos en stock y el
+          segundo a la cantidad de bultos que se pueden colocar en una caja. Calcule cuántas cajas completas se pueden
+          llenar con los bultos disponibles y cuantos bultos sueltos quedarían. <br />
+          <small> Mostrar ambos resultados en consola.</small>
+        </div>
         <button onclick="ejercicio_12()">Ejercicio nº 12</button>
         <pre><code id="ejercicio_12"></code></pre>
       </div>
       <div class="class_container">
-        Se pide realizar un script para una tienda de coches: Si el coche a la venta es un Ford Fiesta (código
-        "fiesta"), el descuento es de un 5%. Si el coche a la venta es un Ford Focus (código "focus"), el descuento es
-        del 10%. El usuario introduce el artículo a través de su código y el script saca el descuento correspondiente
-        por la consola. <br/ >
+        <div class="text_container">
+          Se pide realizar un script para una tienda de coches: Si el coche a la venta es un Ford Fiesta (código
+          "fiesta"), el descuento es de un 5%. Si el coche a la venta es un Ford Focus (código "focus"), el descuento es
+          del 10%. El usuario introduce el artículo a través de su código y el script saca el descuento correspondiente
+          <br />
+          <small>mostrar el descuento por la consola. </small>
+        </div>
         <button onclick="ejercicio_13()">Ejercicio nº 13</button>
         <pre><code id="ejercicio_13"></code></pre>
       </div>
     </div>
-    
+
     <script>
       hljs.highlightAll();
     </script>

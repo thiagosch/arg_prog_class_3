@@ -108,7 +108,10 @@ function ejercicio_8() {
 function ejercicio_9() {
   let nota = prompt("Ingresa la calificacion", "5.5");
   let calificacion = 0;
-  if (nota >= 0 && nota <= 3) {
+  if(nota < 0 ){
+    calificacion = "Valor fuera de rango"
+  }
+  else if (nota <= 3) {
     calificacion = "Muy deficiente";
   } else if (nota <= 5) {
     calificacion = "Insuficiente";
@@ -127,9 +130,9 @@ function ejercicio_9() {
   alert("Calificacion: " + calificacion);
 }
 
-function ejercicio_10() {
+function ejercicio_10_a() {
   const month_number = prompt("Ingresa el numero del mes", "2");
-  const month_name = obtener_mes(month_number);
+  const month_name = ejercicio_10_b(month_number);
   if (month_number <= 0 || month_number >= 12) {
     alert("Los meses van del 1 al 12");
     return;
@@ -137,7 +140,6 @@ function ejercicio_10() {
   const days_per_month = "111111110011111111101111111110111111111111110111111111011111";
   let position = (parseInt(month_number) - 1) * 5;
   let number_of_days = days_per_month.slice(position, position + 5);
-  console.log(number_of_days);
   multiplyer = 16;
   let numb = 0;
   for (let index = 0; index < number_of_days.length; index++) {
@@ -148,7 +150,7 @@ function ejercicio_10() {
   alert(month_name + " tiene " + numb + " dias");
 }
 
-function obtener_mes(number) {
+function ejercicio_10_b(number) {
   const months = "EneroFebreroMarzoAbrilMayoJunioJulioAgostoSeptiembreOctubreNoviembreDiciembre";
   const lengths = "464434459688";
 
@@ -257,8 +259,22 @@ for (let i = 1; i <= 13; i++) {
 
   if (i == "3") {
     functionName = "ejercicio_" + i + "_a";
+    insert_function(functionName);
+    functionName = "ejercicio_" + i + "_b";
+    insert_function(functionName);
+    continue;
+  } else if (i == 10) {
+    functionName = "ejercicio_" + i + "_a";
+    insert_function(functionName);
+    functionName = "ejercicio_" + i + "_b";
+    insert_function(functionName);
+  } else {
+    insert_function(functionName);
   }
 
-  document.getElementById("ejercicio_" + i).innerHTML = window[functionName].toString();
-  functionName = window[functionName].toString();
+  // document.getElementById("ejercicio_" + i).innerHTML = window[functionName].toString();
+  // functionName = window[functionName].toString();
+}
+function insert_function(functionName) {
+  document.getElementById(functionName).innerHTML = window[functionName].toString();
 }
