@@ -166,11 +166,91 @@ function obtener_mes(number) {
   }
 }
 
-function ejercicio_11() {}
+function ejercicio_11() {
+  selected_number = parseInt(prompt("ingresa un numero mayor a 10"));
+  string = "";
+  if (selected_number > 10) {
+    alert("nono, seria divertido pero la consigna dice que no");
+    alert("aunque no dice nada de numeros negativos ;)");
+    return;
+  }
+  if (selected_number < 0) {
+    for (let width = -1; width > selected_number - 1; width--) {
+      for (let height = -1; height > width - 1; height--) {
+        string += height;
+      }
+      string += "\n";
+    }
+  } else {
+    for (let width = 1; width < selected_number + 1; width++) {
+      for (let height = 1; height < width + 1; height++) {
+        string += height;
+      }
+      string += "\n";
+    }
+  }
+  alert(string);
+}
 
-function ejercicio_12() {}
+function ejercicio_12() {
+  const bulges = parseInt(prompt("Cantidad de de bultos en stock"));
+  const max_bulges_per_crotch = parseInt(prompt("cantidad de bultos por paquete")); //should be only one but well...
+  let remaining_bulges = bulges % max_bulges_per_crotch;
+  let max_crotches = Math.floor(bulges / max_bulges_per_crotch);
+  console.log("Cajas completas:", max_crotches, "bultos restantes:", remaining_bulges);
+  if (remaining_bulges != 0) {
+    remaining_bulges = "\nBultos extra: " + remaining_bulges;
+  } else {
+    remaining_bulges = "Justo, no sobra ninguno";
+  }
+  if (max_crotches != 0) {
+    max_crotches = "Paquetes llenos: " + max_crotches;
+  } else {
+    max_crotches = "No llenas ni un paquete con esos bultos.";
+  }
+  if (max_bulges_per_crotch == 1) {
+    alert(max_crotches + remaining_bulges + "\nComo tiene que ser.");
+  } else {
+    alert(max_crotches + remaining_bulges);
+  }
+}
 
-function ejercicio_13() {}
+function ejercicio_13() {
+  const cars = {
+    1: { display_name: "Ford Focus", price: 1500, discounts: { focus: 10 } },
+    2: { display_name: "Ford Fiesta", price: 1100, discounts: { fiesta: 5 } },
+  };
+
+  prompt_string = "Que auto querias comprar?\n";
+  Object.keys(cars).forEach((index) => {
+    const name = cars[index]["display_name"];
+    const price = cars[index]["price"];
+    prompt_string += index + ". " + name + " a $" + price + "\n";
+  });
+  const car_index = prompt(prompt_string);
+  const selected_car = cars[car_index];
+  if (!selected_car) {
+    alert("Parece que no tenemos ese auto");
+    ejercicio_13();
+  }
+
+  const discount_code = prompt("Tenes algun codigo de descuento?").toLocaleLowerCase();
+  let final_price = selected_car["price"];
+  let discount = 0;
+  Object.keys(selected_car["discounts"]).forEach((code) => {
+    if (code == discount_code) {
+      final_price = final_price - (selected_car["discounts"][code] / 100) * final_price;
+      discount = selected_car["discounts"][code];
+    }
+  });
+  if (discount) {
+    response_string = "Tu codigo aplico un " + discount + "% de descuento!\nPrecio final $" + final_price;
+  } else {
+    response_string = "Precio final $" + final_price;
+  }
+  console.log(response_string);
+  alert(response_string);
+}
 
 for (let i = 1; i <= 13; i++) {
   let functionName = "ejercicio_" + i;
@@ -180,7 +260,5 @@ for (let i = 1; i <= 13; i++) {
   }
 
   document.getElementById("ejercicio_" + i).innerHTML = window[functionName].toString();
-
-  console.log(functionName);
   functionName = window[functionName].toString();
 }
